@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+}
+
+@layer utilities {
+	@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+	.font-inter {
+		font-family: "Inter", sans-serif;
+	}
+}
+
+.indicator {
+	background-color: hsl(0, 0%, 50%) !important;
+
+	transition: background-color 0.3s ease;
+}
+
+.indicator:hover {
+	background-color: hsla(0, 0%, 75%) !important;
+}
+
+.indicator[aria-current="true"] {
+	background-color: hsl(0, 0%, 100%) !important;
+}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./output.css" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script type="module" src="index.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body class="text-white font-inter bg-black">
+		<nav
+			id="navbar"
+			class="fixed w-full h-28 z-20 top-0 start-0 justify-between items-center flex flex-row px-12 transition ease-in-out duration-300"
+		>
+			<div id="logo" class="flex flex-row justify-center items-center gap-4 mix-blend-difference">
+				<svg class="h-8 w-fit" width="160" height="89" viewBox="0 0 160 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M76.2809 4.82322C37.8019 6.83347 6.95758 37.6778 4.94733 76.1568H12.827V80.1568H12.8431C12.8431 42.9119 43.036 12.719 80.2809 12.719C117.526 12.719 147.719 42.9119 147.719 80.1568H147.729V76.1568H155.615C153.604 37.6777 122.76 6.83344 84.2809 4.82321V12.6825H76.2809V4.82322Z"
+						fill="white"
+					/>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M88.2809 0.682495H72.2809V16.6825H88.2809V0.682495ZM84.2809 4.6825H76.2809L76.2809 12.6825H84.2809L84.2809 4.6825Z"
+						fill="white"
+					/>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M16.8271 72.1568H0.827057V88.1568H16.8271V72.1568ZM12.827 76.1568L4.82706 76.1568V84.1568H12.8271L12.827 76.1568Z"
+						fill="white"
+					/>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M159.729 72.1568H143.729V88.1568H159.729V72.1568ZM155.729 76.1568L147.729 76.1568L147.729 84.1568H155.729V76.1568Z"
+						fill="white"
+					/>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M151.729 16.6299C156.147 16.6299 159.729 13.0481 159.729 8.62985C159.729 4.21158 156.147 0.629852 151.729 0.629852C147.31 0.629852 143.729 4.21158 143.729 8.62985C143.729 13.0481 147.31 16.6299 151.729 16.6299ZM151.615 12.6299C153.824 12.6299 155.615 10.839 155.615 8.62985C155.615 6.42072 153.824 4.62985 151.615 4.62985C149.405 4.62985 147.615 6.42072 147.615 8.62985C147.615 10.839 149.405 12.6299 151.615 12.6299Z"
+						fill="white"
+					/>
+					<path
+						d="M12.8271 8.62985C12.8271 10.8379 11.0379 12.6282 8.8302 12.6299H76.2809V4.62985H8.8302C11.0379 4.63155 12.8271 6.42176 12.8271 8.62985Z"
+						fill="white"
+					/>
+					<path
+						d="M84.2809 12.6299H151.729C149.519 12.6299 147.729 10.839 147.729 8.62985C147.729 6.42071 149.519 4.62985 151.729 4.62985H84.2809V12.6299Z"
+						fill="white"
+					/>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M8.82706 16.6299C13.2454 16.6299 16.827 13.0481 16.827 8.62985C16.827 4.21158 13.2454 0.629852 8.82706 0.629852C4.40878 0.629852 0.827057 4.21158 0.827057 8.62985C0.827057 13.0481 4.40878 16.6299 8.82706 16.6299ZM8.82706 12.6299C11.0362 12.6299 12.8271 10.839 12.8271 8.62985C12.8271 6.42072 11.0362 4.62985 8.82706 4.62985C6.61792 4.62985 4.82706 6.42072 4.82706 8.62985C4.82706 10.839 6.61792 12.6299 8.82706 12.6299Z"
+						fill="white"
+					/>
+				</svg>
+				<a href="#" class="w-fit h-fit">
+					<svg class="h-8 w-fit" width="681" height="185" viewBox="0 0 681 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M0 168.8V182.736H92.088C112.424 182.736 128.253 179.008 139.105 171.087C150.12 163.047 155.577 151.007 155.76 135.498C156.117 119.384 149.979 106.573 137.368 97.4348C131.56 93.2115 125.388 90.189 118.867 88.3797C125.255 85.6996 130.871 81.9633 135.681 77.1533C143.842 68.9924 147.824 58.2844 147.824 45.336C147.824 32.1684 142.744 21.2578 132.679 12.8356C122.761 4.39181 109.277 0.352005 92.6 0.352005H0V14.288H24.064V168.8H0ZM121.6 134.459C121.438 120.645 116.931 110.781 108.449 104.301C102.066 99.4765 94.0327 96.976 84.152 96.976H53.36V168.8H86.2C95.4549 168.8 103.133 166.696 109.382 162.638C117.498 157.221 121.763 148.108 121.6 134.459ZM87.992 14.288C97.924 14.288 104.853 17.0771 109.361 22.1721C113.932 27.337 116.48 35.3889 116.48 46.872C116.48 59.8282 112.388 69.2973 104.533 75.7747C98.2049 80.8322 91.3527 83.296 83.896 83.296H53.36V14.288H87.992Z"
+							fill="white"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M194.365 123.04H275.498L275.711 120.27C276.052 115.831 276.232 112.572 276.232 110.568C276.232 95.8981 271.647 83.3857 262.403 73.23C253.071 62.8056 240.707 57.648 225.616 57.648C207.377 57.648 192.594 64.3143 181.573 77.6838L181.57 77.6871C170.857 90.721 165.528 106.255 165.528 124.136C165.528 141.951 170.482 156.557 180.654 167.637L180.672 167.657L180.691 167.677C191.612 179.144 206.545 184.736 225.104 184.736C243.994 184.736 259.842 176.851 272.484 161.361L274.436 158.969L267.002 153.25L265.232 154.366C252.897 162.139 243.343 165.68 236.368 165.68C222.16 165.68 211.834 161.381 204.862 153.17L204.836 153.139L204.808 153.108C198.42 145.994 194.836 136.081 194.365 123.04ZM241.18 82.0922L241.192 82.1135L241.204 82.1346C245.118 88.8031 247.327 97.3653 247.66 107.971C239.063 108.276 221.43 108.089 194.623 107.392C195.054 96.3228 197.971 87.8811 203.084 81.7738C208.696 75.0707 215.468 71.84 223.568 71.84C231.535 71.84 237.277 75.1867 241.18 82.0922Z"
+							fill="white"
+						/>
+						<path
+							d="M214.605 52.0821L241.191 35.9226L241.232 35.8959C243.496 34.4165 244.892 32.1721 245.565 29.4988C246.113 27.3212 246.167 25.0211 245.079 23.0059C243.958 20.9318 241.977 19.795 239.82 19.2521C236.398 18.3906 233.196 19.1451 230.774 21.7477L230.763 21.7596L206.907 47.9597L214.605 52.0821Z"
+							fill="white"
+						/>
+						<path
+							d="M392.63 181.968V139.872H380.05L379.739 142.521C378.741 150.999 377.184 157.749 375.13 162.856C373.436 166.037 371.591 167.008 369.662 167.008L318.234 167.238L388.79 70.3768V58.8846L385.7 58.9773C368.704 59.4872 337.359 59.4882 291.616 58.9762L288.582 58.9422V98.512H301.32L301.715 95.9731C302.9 88.351 304.075 82.324 305.232 77.8552C305.39 77.2938 305.897 76.4946 307.891 75.83L307.975 75.8022L308.056 75.7694C310.287 74.8773 312.467 74.4491 314.614 74.448H314.622L351.716 74.6688L279.11 173.117V182.768L282.142 182.736C330.609 182.224 366.436 181.968 389.63 181.968H392.63Z"
+							fill="white"
+						/>
+						<path
+							d="M424.23 34.6573L424.262 34.6894L424.295 34.7206C427.686 37.9115 431.643 39.632 436.079 39.632C440.515 39.632 444.473 37.9115 447.863 34.7206C451.341 31.4475 453.096 27.398 452.903 22.7403C452.887 18.0765 451.223 14.062 447.894 10.9245C444.755 7.80179 440.836 6.23999 436.335 6.23999C431.707 6.23999 427.636 8.06419 424.23 11.4707L424.198 11.5028L424.167 11.5359C420.976 14.9263 419.255 18.8839 419.255 23.32C419.255 27.6361 421.017 31.4446 424.23 34.6573Z"
+							fill="white"
+						/>
+						<path
+							d="M450.855 166.936V60H403.383V72.912H421.231C422.205 72.912 422.639 73.1814 422.903 73.4577C423.227 73.7958 423.645 74.5222 423.863 76.0062V166.936C423.863 168.469 423.495 169.062 423.287 169.278C423.104 169.47 422.611 169.824 421.231 169.824H403.383V182.736H471.335V169.824H453.487C452.107 169.824 451.615 169.47 451.431 169.278C451.224 169.062 450.855 168.469 450.855 166.936Z"
+							fill="white"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M498.052 123.04H579.184L579.398 120.27C579.739 115.831 579.918 112.572 579.918 110.568C579.918 95.8981 575.334 83.3857 566.089 73.23C556.758 62.8056 544.393 57.648 529.302 57.648C511.064 57.648 496.28 64.3143 485.259 77.6838L485.257 77.6871C474.544 90.721 469.214 106.255 469.214 124.136C469.214 141.951 474.169 156.557 484.34 167.637L484.359 167.657L484.378 167.677C495.299 179.144 510.232 184.736 528.79 184.736C547.681 184.736 563.529 176.851 576.171 161.361L578.123 158.969L570.689 153.25L568.919 154.366C556.584 162.139 547.03 165.68 540.054 165.68C525.847 165.68 515.52 161.381 508.549 153.17L508.522 153.139L508.495 153.108C502.107 145.994 498.522 136.081 498.052 123.04ZM544.867 82.0922L544.879 82.1135L544.891 82.1346C548.805 88.8031 551.014 97.3653 551.346 107.971C542.75 108.276 525.117 108.089 498.31 107.392C498.741 96.3228 501.658 87.8811 506.771 81.7738C512.383 75.0707 519.154 71.84 527.254 71.84C535.222 71.84 540.964 75.1867 544.867 82.0922Z"
+							fill="white"
+						/>
+						<path
+							d="M580.671 58.464V71.632H595.447C597.77 71.632 599.021 72.2244 599.726 72.9293C600.442 73.6455 601.073 74.9547 601.151 77.3821V165.316C600.799 166.763 600.322 167.547 599.918 167.951C599.562 168.307 599.097 168.544 598.263 168.544H580.927V181.456H649.135V168.544H631.287C630.182 168.544 629.671 168.246 629.376 167.951C629.039 167.613 628.614 166.905 628.399 165.449V107.8C628.399 101.336 630.456 95.6046 634.633 90.4997C638.851 85.3445 643.189 83.152 647.671 83.152C651.101 83.152 653.871 83.9654 656.119 85.4641C658.377 86.9693 660.31 89.3006 661.836 92.6574L662.726 94.6151L664.866 94.4011C669.681 93.9196 673.702 92.18 676.472 88.8565C679.207 85.5741 680.367 81.1684 680.367 76.056C680.367 70.5692 678.578 65.7494 674.989 61.7611C671.279 57.639 666.333 55.648 660.471 55.648C650.94 55.648 642.111 59.9652 634.03 68.0467L634.012 68.0641L633.995 68.0817C631.996 70.1474 630.212 72.1871 628.655 74.2012V58.464H580.671Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+			<div id="nav-links" class="flex flex-row gap-12 mix-blend-difference">
+				<a href="#about" class="font-light text-xl">About</a>
+				<a href="#works" class="font-light text-xl">Works</a>
+				<a href="#services" class="font-light text-xl">Services</a>
+				<a href="#team" class="font-light text-xl">Team</a>
+				<a href="#contact" class="font-light text-xl">Contact Us</a>
+			</div>
+		</nav>
+		<main class="">
+			<!-- RECENT WORKS/PORTFOLIO SECTION -->
+			<section id="portfolio" class="w-full h-screen z-10 bg-[url('./public/images/portfolio1.gif')] bg-cover bg-center relative overflow-hidden">
+				<div
+					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-30% before:z-[-5]"
+				></div>
+				<div class="w-full h-full flex flex-row items-end justify-between px-12 py-16">
+					<div id="movie-picker" class="w-fit flex flex-col gap-1">
+						<div id="movie-1" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
+							<p class="font-inter text-7xl font-semibold tracking-tight">Movie 1</p>
+							<p class="font-inter text-xl font-normal">2024</p>
+						</div>
+						<div id="movie-2" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
+							<p class="font-inter text-7xl font-semibold tracking-tight">Movie 2</p>
+							<p class="font-inter text-xl font-normal">2024</p>
+						</div>
+						<div id="movie-3" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
+							<p class="font-inter text-7xl font-semibold tracking-tight">Movie 3</p>
+							<p class="font-inter text-xl font-normal">2024</p>
+						</div>
+						<div id="movie-4" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
+							<p class="font-inter text-7xl font-semibold tracking-tight">Movie 4</p>
+							<p class="font-inter text-xl font-normal">2024</p>
+						</div>
+						<div id="movie-5" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
+							<p class="font-inter text-7xl font-semibold tracking-tight">Movie 5</p>
+							<p class="font-inter text-xl font-normal">2024</p>
+						</div>
+					</div>
+					<svg class="h-24 w-fit" width="143" height="258" viewBox="0 0 143 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M69.1056 245.5L69.1056 0.459732H75.1056L75.1056 245.425L138.408 181.006L142.687 185.212L72.1211 257.022L0.539307 185.227L4.78826 180.991L69.1056 245.5Z"
+							fill="white"
+						/>
+					</svg>
+				</div>
+			</section>
+
+			<!-- ABOUT SECTION -->
+			<section
+				id="about"
+				class="w-full h-fit bg-black bg-cover bg-center flex flex-row justify-center items-start px-12 py-20 gap-12 scroll-mt-28"
+				data-aos="fade-up"
+			>
+				<div class="flex flex-col w-52 h-fit items-center">
+					<h1 class="text-white text-5xl font-bold">FROM VISION TO REALITY</h1>
+				</div>
+				<div id="about-container" class="flex flex-col w-[50%] h-fit justify-between gap-4 scroll-mt-56">
+					<p class="text-white/75 text-sm text-justify">
+						At Bezier, we believe that every story deserves to be told with passion, precision, and creativity. Our mission is to transform ideas into
+						visually captivating narratives that resonate with audiences. With a focus on artistry and innovation, we bring visions to life, one frame
+						at a time.
+					</p>
+					<p class="text-white/75 text-sm text-justify">
+						We thrive on exploring diverse genres and perspectives, from the quiet intensity of indie films to the compelling depth of documentaries.
+						Rooted in the belief that stories shape the way we see the world, we push the boundaries of creativity to deliver productions that
+						inspire, inform, and entertain. Whether it is an intimate tale or a grand cinematic adventure, Bezier is dedicated to turning imagination
+						into reality.
+					</p>
+					<a href="#" class="flex flex-row text-sm gap-2 h-fit w-fit py-2 px-6 bg-red-600 rounded-2xl items-center">
+						MORE ABOUT US
+						<svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+							<polygon
+								fill="currentColor"
+								points="359.873 121.377 337.246 144.004 433.243 240.001 16 240.001 16 240.002 16 272.001 16 272.002 433.24 272.002 337.246 367.996 359.873 390.623 494.498 256 359.873 121.377"
+								class="ci-primary"
+							/>
+						</svg>
+					</a>
+				</div>
+			</section>
+
+			<!-- SERVICES SECTION -->
+			<section
+				id="services"
+				class="w-full h-fit z-10 bg-[url('./public/images/pexels-ron-lach.jpg')] bg-cover bg-center relative overflow-hidden px-12 py-20 scroll-mt-28"
+			>
+				<div class="before:content-[''] before:absolute before:inset-0 before:block before:bg-black before:bg-opacity-80 before:z-[-5]"></div>
+				<div
+					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:from-black before:to-transparent before:z-[-5]"
+				></div>
+				<div id="services-container" class="flex flex-row gap-12 justify-center items-center scroll-mt-56">
+					<!-- carousel -->
+					<div id="default-carousel" class="relative w-[50%]" data-carousel="slide" data-aos="fade-up" data-aos-delay="200">
+						<!-- Carousel wrapper -->
+						<div class="relative overflow-hidden h-96">
+							<!-- Item 1 -->
+							<div class="hidden duration-700 ease-in-out" data-carousel-item>
+								<img
+									src="./public/images/pexels-cottonbro-.jpg"
+									class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+									alt="..."
+								/>
+							</div>
+							<!-- Item 2 -->
+							<div class="hidden duration-700 ease-in-out" data-carousel-item>
+								<img
+									src="./public/images/pexels-maksim-romashkin.jpg"
+									class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+									alt="..."
+								/>
+							</div>
+							<!-- Item 3 -->
+							<div class="hidden duration-700 ease-in-out" data-carousel-item>
+								<img
+									src="./public/images/pexels-pixabay.jpg"
+									class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+									alt="..."
+								/>
+							</div>
+						</div>
+						<!-- Slider indicators -->
+						<div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+							<button
+								type="button"
+								class="indicator w-3 h-3 rounded-full"
+								aria-current="true"
+								aria-label="Slide 1"
+								data-carousel-slide-to="0"
+							></button>
+							<button
+								type="button"
+								class="indicator w-3 h-3 rounded-full"
+								aria-current="false"
+								aria-label="Slide 2"
+								data-carousel-slide-to="1"
+							></button>
+							<button
+								type="button"
+								class="indicator w-3 h-3 rounded-full"
+								aria-current="false"
+								aria-label="Slide 3"
+								data-carousel-slide-to="2"
+							></button>
+						</div>
+
+						<!-- Slider controls -->
+						<button
+							type="button"
+							class="absolute top-0 start-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
+							data-carousel-prev
+						>
+							<span class="inline-flex items-center justify-center w-10 h-full group-hover:bg-white/20 transition ease-in-out duration-300">
+								<svg
+									class="w-4 h-4 text-white/80 rtl:rotate-180"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 6 10"
+								>
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+								</svg>
+								<span class="sr-only">Previous</span>
+							</span>
+						</button>
+						<button
+							type="button"
+							class="absolute top-0 end-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
+							data-carousel-next
+						>
+							<span class="inline-flex items-center justify-center w-10 h-full group-hover:bg-white/20 transition ease-in-out duration-300">
+								<svg class="w-4 h-4 text-white/80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+								</svg>
+								<span class="sr-only">Next</span>
+							</span>
+						</button>
+					</div>
+					<!-- end of carousel -->
+
+					<div class="w-[15%] h-fit flex flex-col gap-12" data-aos="fade-up-left">
+						<h1 class="text-white text-4xl font-bold">We Tell, You Inspire</h1>
+						<p class="text-white/75 text-sm text-justify">
+							At Bezier, we offer a wide range of services designed to bring your stories to life. Whether it’s film production, post-production, or
+							storytelling through commercials and documentaries.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- TEAM SECTION -->
+			<section
+				id="team"
+				class="w-full h-fit z-10 bg-[url('./public/images/pexels-cottonbro-team.jpg')] bg-cover bg-center relative overflow-hidden px-12 py-20 scroll-mt-28"
+			>
+				<div class="before:content-[''] before:absolute before:inset-0 before:block before:bg-black before:bg-opacity-50 before:z-[-5]"></div>
+				<div
+					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-10% before:z-[-5]"
+				></div>
+				<div class="flex flex-row gap-12 justify-center items-center scroll-mt-56">
+					<div class="w-[15%] h-fit flex flex-col gap-12" data-aos="fade-up-right" data-aos-delay="0">
+						<h1 class="text-white text-4xl font-bold">Meet the Dreammakers</h1>
+						<p class="text-white/75 text-sm text-justify">
+							Our team is a collective of passionate filmmakers, writers, and creative minds dedicated to storytelling. At Bezier, collaboration and
+							innovation drive everything we do. Each member brings their unique skills and perspective, contributing to the vibrant, visionary spirit
+							that defines our work.
+						</p>
+					</div>
+					<div id="team-container" class="flex flex-row gap-8">
+						<div
+							class="h-80 w-60 z-10 bg-[url('./public/images/albert-dera.jpg')] bg-cover bg-center relative overflow-hidden"
+							data-aos="fade-up"
+							data-aos-delay="200"
+						>
+							<div
+								class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-30% before:z-[-5]"
+							></div>
+							<div class="flex flex-col w-full h-full justify-end p-4">
+								<h2 class="text-base font-bold">Albert Sera</h2>
+								<p class="text-sm">Director</p>
+							</div>
+						</div>
+						<div
+							class="h-80 w-60 z-10 bg-[url('./public/images/albert-dera.jpg')] bg-cover bg-center relative overflow-hidden"
+							data-aos="fade-up"
+							data-aos-delay="300"
+						>
+							<div
+								class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-30% before:z-[-5]"
+							></div>
+							<div class="flex flex-col w-full h-full justify-end p-4">
+								<h2 class="text-base font-bold">Albert Sera</h2>
+								<p class="text-sm">Director</p>
+							</div>
+						</div>
+						<div
+							class="h-80 w-60 z-10 bg-[url('./public/images/albert-dera.jpg')] bg-cover bg-center relative overflow-hidden"
+							data-aos="fade-up"
+							data-aos-delay="400"
+						>
+							<div
+								class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-30% before:z-[-5]"
+							></div>
+							<div class="flex flex-col w-full h-full justify-end p-4">
+								<h2 class="text-base font-bold">Albert Sera</h2>
+								<p class="text-sm">Director</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- AWARDS SECTION -->
+			<section
+				id="awards"
+				class="w-full h-fit z-10 bg-black bg-cover bg-center relative overflow-hidden px-12 py-20 justify-center items-center flex flex-col gap-12"
+			>
+				<div class="flex flex-col w-[50%] justify-center items-center gap-8" data-aos="fade-up">
+					<h1 class="text-white text-4xl font-bold">The Spotlight is Ours</h1>
+					<p class="text-white/75 text-sm text-center">
+						Bezier has earned recognition for its dedication to cinematic excellence. From film festivals to industry accolades, our work has been
+						celebrated for pushing creative boundaries and delivering impactful storytelling.
+					</p>
+				</div>
+				<div class="flex flex-row gap-32 justify-center items-center">
+					<img src="./public/images/Best Writing.png" alt="Best Writing Award" class="h-44 w-fit" data-aos="fade-up-right" data-aos-delay="200" />
+					<img src="./public/images/Best Documentary.png" alt="Best Documentary Award" class="h-56 w-fit" data-aos="fade-up" data-aos-delay="400" />
+					<img src="./public/images/Best Director.png" alt="Best Director Award" class="h-44 w-fit" data-aos="fade-up-left" data-aos-delay="300" />
+				</div>
+			</section>
+
+			<!-- CONTACT SECTION -->
+			<section
+				id="contact"
+				class="w-full h-fit z-10 bg-[url('./public/images/pexels-cottonbro-team.jpg')] bg-cover bg-center relative overflow-hidden px-12 py-20 justify-center items-center flex flex-col scroll-mt-28"
+			>
+				<div class="before:content-[''] before:absolute before:inset-0 before:block before:bg-black before:bg-opacity-50 before:z-[-5]"></div>
+				<div
+					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:from-black before:to-transparent before:to-10% before:z-[-5]"
+				></div>
+				<div id="contact-container" class="flex flex-col w-[50%] justify-center items-center bg-black p-8 gap-4" data-aos="fade-up">
+					<div class="flex flex-col gap-4 justify-start">
+						<h1 class="text-white text-4xl font-bold">Ready to Roll?</h1>
+						<p class="text-white/75 text-sm text-justify">
+							Let’s turn your vision into a masterpiece. Whether you have a concept in mind or need help shaping your ideas, Bezier is here to
+							collaborate and create. Get in touch today, and together, we’ll craft stories that leave a lasting impression.
+						</p>
+					</div>
+					<form action="" class="flex flex-col gap-2 w-full">
+						<input type="text" name="" id="" placeholder="Enter your name" class="text-white bg-black" required />
+						<input type="email" name="" id="" placeholder="Enter your email" class="text-white bg-black" required />
+						<input type="text" name="" id="" placeholder="Enter your phone number" class="text-white bg-black" required />
+						<input type="text" name="" id="" placeholder="Enter your message" class="text-white bg-black h-32" required />
+						<input
+							type="submit"
+							value="Submit"
+							class="flex flex-row text-sm h-fit w-full py-2 px-6 bg-red-600 items-center hover:cursor-pointer hover:bg-red-700"
+						/>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer></footer>
+
+		<!-- scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
+</html>
