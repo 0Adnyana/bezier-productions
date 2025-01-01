@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+	// portfolio section
 	const portfolioSection = document.getElementById("works");
-
 	const movies = document.querySelectorAll("#movie-picker > div");
 	const movieDescription = document.getElementById("movie-description");
 

@@ -16,7 +16,7 @@
 	<body class="text-white font-inter bg-black">
 		<nav
 			id="navbar"
-			class="fixed w-full h-28 z-20 top-0 start-0 justify-between items-center flex flex-row px-12 transition ease-in-out duration-300"
+			class="fixed w-full h-28 z-20 top-0 start-0 lg:justify-between items-center flex lg:flex-row md:flex-col md:justify-center md:gap-4 md:h-32 px-12 transition ease-in-out duration-300"
 		>
 			<a id="logo" href="#" class="flex flex-row items-center gap-4 mix-blend-difference">
 				<svg class="h-8 w-fit" width="160" height="89" viewBox="0 0 160 89" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,43 +119,44 @@
 				<div
 					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-30% before:z-[-5]"
 				></div>
-				<div class="w-full h-full flex flex-row items-end justify-between px-12 py-16 gap-2">
+				<div class="w-full h-full flex lg:flex-row md:flex-col md:items-start lg:items-end justify-between px-12 py-16 md:pt-32 gap-4">
 					<div id="movie-picker" class="flex flex-col w-fit">
 						<div id="movie-1" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
-							<p class="font-inter md:text-6xl text-7xl font-semibold tracking-tight text-nowrap">Her Shadow’s Hold</p>
+							<p class="font-inter md:text-5xl lg:text-7xl font-semibold tracking-tight text-nowrap">Her Shadow’s Hold</p>
 							<p class="font-inter text-xl font-normal">2024</p>
 						</div>
 						<div id="movie-2" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
-							<p class="font-inter md:text-6xl text-7xl font-semibold tracking-tight text-nowrap">Black Echo</p>
+							<p class="font-inter md:text-5xl lg:text-7xl font-semibold tracking-tight text-nowrap">Black Echo</p>
 							<p class="font-inter text-xl font-normal">2024</p>
 						</div>
 						<div id="movie-3" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
-							<p class="font-inter md:text-6xl text-7xl font-semibold tracking-tight text-nowrap">Echoes in Silence</p>
+							<p class="font-inter md:text-5xl lg:text-7xl font-semibold tracking-tight text-nowrap">Echoes in Silence</p>
 							<p class="font-inter text-xl font-normal">2023</p>
 						</div>
 						<div id="movie-4" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
-							<p class="font-inter md:text-6xl text-7xl font-semibold tracking-tight text-nowrap">Heavy Lies the Crown</p>
+							<p class="font-inter md:text-5xl lg:text-7xl font-semibold tracking-tight text-nowrap">Heavy Lies the Crown</p>
 							<p class="font-inter text-xl font-normal">2023</p>
 						</div>
 						<div id="movie-5" class="w-fit h-fit flex flex-row gap-2 text-white hover:text-opacity-60 hover:cursor-pointer">
-							<p class="font-inter md:text-6xl text-7xl font-semibold tracking-tight text-nowrap">Neon Fragments</p>
+							<p class="font-inter md:text-5xl lg:text-7xl font-semibold tracking-tight text-nowrap">Neon Fragments</p>
 							<p class="font-inter text-xl font-normal">2022</p>
 						</div>
 					</div>
-					<p id="movie-description" class="text-white/75 text-sm text-center h-fit w-full">
-						When a struggling artist is abducted by a mysterious and unhinged woman, he finds himself trapped in a nightmare where reality and
-						obsession blur. As he uncovers her twisted motives, survival becomes a game of wits, and escaping her clutches could mean facing an even
-						darker truth.
-					</p>
-
-					<svg class="h-24 w-24" width="143" height="258" viewBox="0 0 143 258" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M69.1056 245.5L69.1056 0.459732H75.1056L75.1056 245.425L138.408 181.006L142.687 185.212L72.1211 257.022L0.539307 185.227L4.78826 180.991L69.1056 245.5Z"
-							fill="white"
-						/>
-					</svg>
+					<div class="flex flex-row w-full h-fit items-end">
+						<p id="movie-description" class="text-white/75 text-sm text-center h-fit w-full">
+							When a struggling artist is abducted by a mysterious and unhinged woman, he finds himself trapped in a nightmare where reality and
+							obsession blur. As he uncovers her twisted motives, survival becomes a game of wits, and escaping her clutches could mean facing an even
+							darker truth.
+						</p>
+						<svg class="h-24 w-24" width="143" height="258" viewBox="0 0 143 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M69.1056 245.5L69.1056 0.459732H75.1056L75.1056 245.425L138.408 181.006L142.687 185.212L72.1211 257.022L0.539307 185.227L4.78826 180.991L69.1056 245.5Z"
+								fill="white"
+							/>
+						</svg>
+					</div>
 				</div>
 			</section>
 
@@ -203,9 +204,9 @@
 				<div
 					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:from-black before:to-transparent before:z-[-5]"
 				></div>
-				<div id="services-container" class="flex flex-row gap-12 justify-center items-center scroll-mt-56">
+				<div id="services-container" class="flex lg:flex-row md:flex-col-reverse gap-12 justify-center items-center scroll-mt-56">
 					<!-- carousel -->
-					<div id="default-carousel" class="relative w-[50%]" data-carousel="slide" data-aos="fade-up" data-aos-delay="200">
+					<div id="default-carousel" class="relative md:w-full lg:w-[50%]" data-carousel="slide" data-aos="fade-up" data-aos-delay="200">
 						<!-- Carousel wrapper -->
 						<div class="relative overflow-hidden h-96">
 							<!-- Item 1 -->
@@ -292,9 +293,9 @@
 					</div>
 					<!-- end of carousel -->
 
-					<div class="w-[15%] h-fit flex flex-col gap-12" data-aos="fade-up-left">
-						<h1 class="text-white text-4xl font-bold">We Tell, You Inspire</h1>
-						<p class="text-white/75 text-sm text-justify">
+					<div class="lg:w-[20%] md:w-[70%] h-fit flex flex-col gap-12 md:gap-4" data-aos="fade-up-left">
+						<h1 class="text-white text-4xl font-bold md:text-center lg:text-left">We Tell, You Inspire</h1>
+						<p class="text-white/75 text-sm text-justify md:text-center lg:text-justify">
 							At Bezier, we offer a wide range of services designed to bring your stories to life. Whether it’s film production, post-production, or
 							storytelling through commercials and documentaries.
 						</p>
@@ -311,18 +312,17 @@
 				<div
 					class="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:to-10% before:z-[-5]"
 				></div>
-				<div class="flex flex-row gap-12 justify-center items-center scroll-mt-56">
-					<div class="w-[15%] h-fit flex flex-col gap-12" data-aos="fade-up-right" data-aos-delay="0">
-						<h1 class="text-white text-4xl font-bold">Meet the Dreammakers</h1>
-						<p class="text-white/75 text-sm text-justify">
+				<div class="flex lg:flex-row md:flex-col gap-12 justify-center items-center scroll-mt-56">
+					<div class="lg:w-[20%] md:w-[70%] h-fit flex flex-col gap-12 md:gap-4" data-aos="fade-up-right" data-aos-delay="0">
+						<h1 class="text-white text-4xl font-bold md:text-center lg:text-left">Meet the Dreammakers</h1>
+						<p class="text-white/75 text-sm text-justify md:text-center lg:text-justify">
 							Our team is a collective of passionate filmmakers, writers, and creative minds dedicated to storytelling. At Bezier, collaboration and
-							innovation drive everything we do. Each member brings their unique skills and perspective, contributing to the vibrant, visionary spirit
-							that defines our work.
+							innovation drive everything we do.
 						</p>
 					</div>
-					<div id="team-container" class="flex flex-row gap-8">
+					<div id="team-container" class="flex flex-row gap-8 md:flex-wrap justify-center items-center">
 						<div
-							class="h-80 w-60 z-10 bg-[url('./public/team/albert-dera.jpg')] bg-cover bg-center relative overflow-hidden"
+							class="lg:h-80 lg:w-60 md:h-96 md:w-72 z-10 bg-[url('./public/team/albert-dera.jpg')] bg-cover bg-center relative overflow-hidden"
 							data-aos="fade-up"
 							data-aos-delay="200"
 						>
@@ -335,7 +335,7 @@
 							</div>
 						</div>
 						<div
-							class="h-80 w-60 z-10 bg-[url('./public/team/nartan-buyukyildiz.jpg')] bg-cover bg-center relative overflow-hidden"
+							class="lg:h-80 lg:w-60 md:h-96 md:w-72 z-10 bg-[url('./public/team/nartan-buyukyildiz.jpg')] bg-cover bg-center relative overflow-hidden"
 							data-aos="fade-up"
 							data-aos-delay="300"
 						>
@@ -348,7 +348,7 @@
 							</div>
 						</div>
 						<div
-							class="h-80 w-60 z-10 bg-[url('./public/team/vince-fleming.jpg')] bg-cover bg-center relative overflow-hidden"
+							class="lg:h-80 lg:w-60 md:h-96 md:w-72 z-10 bg-[url('./public/team/vince-fleming.jpg')] bg-cover bg-center relative overflow-hidden"
 							data-aos="fade-up"
 							data-aos-delay="400"
 						>
@@ -369,24 +369,42 @@
 				id="awards"
 				class="w-full h-fit z-10 bg-black bg-cover bg-center relative overflow-hidden px-12 py-20 justify-center items-center flex flex-col gap-12 scroll-mt-28"
 			>
-				<div class="flex flex-col w-[50%] justify-center items-center gap-8" data-aos="fade-up">
-					<h1 class="text-white text-4xl font-bold">The Spotlight is Ours</h1>
+				<div class="lg:w-[50%] md:w-[70%] h-fit flex flex-col gap-12 md:gap-4 justify-center" data-aos="fade-up">
+					<h1 class="text-white text-4xl font-bold text-center">The Spotlight is Ours</h1>
 					<p class="text-white/75 text-sm text-center">
 						Bezier has earned recognition for its dedication to cinematic excellence. From film festivals to industry accolades, our work has been
 						celebrated for pushing creative boundaries and delivering impactful storytelling.
 					</p>
 				</div>
-				<div class="flex flex-row gap-32 justify-center items-center">
-					<img src="./public/awards/Best Writing.png" alt="Best Writing Award" class="h-44 w-fit" data-aos="fade-up-right" data-aos-delay="200" />
-					<img src="./public/awards/Best Documentary.png" alt="Best Documentary Award" class="h-56 w-fit" data-aos="fade-up" data-aos-delay="400" />
-					<img src="./public/awards/Best Director.png" alt="Best Director Award" class="h-44 w-fit" data-aos="fade-up-left" data-aos-delay="300" />
+				<div class="flex flex-row lg:gap-32 md:gap-16 justify-center items-center">
+					<img
+						src="./public/awards/Best Writing.png"
+						alt="Best Writing Award"
+						class="lg:h-44 w-fit md:h-36"
+						data-aos="fade-up-right"
+						data-aos-delay="200"
+					/>
+					<img
+						src="./public/awards/Best Documentary.png"
+						alt="Best Documentary Award"
+						class="lg:h-56 w-fit md:h-48"
+						data-aos="fade-up"
+						data-aos-delay="400"
+					/>
+					<img
+						src="./public/awards/Best Director.png"
+						alt="Best Director Award"
+						class="lg:h-44 w-fit md:h-36"
+						data-aos="fade-up-left"
+						data-aos-delay="300"
+					/>
 				</div>
 			</section>
 
 			<!-- CONTACT SECTION -->
 			<section
 				id="contact"
-				class="w-full h-fit z-10 bg-[url('./public/backgrounds/pexels-cottonbro-team.jpg')] bg-cover bg-center relative overflow-hidden px-12 py-20 justify-center items-center flex flex-col scroll-mt-28"
+				class="w-full h-fit z-10 bg-[url('./public/backgrounds/pexels-minhle.jpg')] bg-cover bg-center relative overflow-hidden px-12 py-20 justify-center items-center flex flex-col scroll-mt-28"
 			>
 				<div class="before:content-[''] before:absolute before:inset-0 before:block before:bg-black before:bg-opacity-50 before:z-[-5]"></div>
 				<div
@@ -400,19 +418,27 @@
 							collaborate and create. Get in touch today, and together, we’ll craft stories that leave a lasting impression.
 						</p>
 					</div>
-					<div class="flex flex-row w-full gap-2">
+					<div class="flex flex-col w-full gap-2">
 						<form action="" class="flex flex-col gap-2 w-full">
 							<input type="text" name="" id="" placeholder="Name" class="text-white bg-black" required />
-							<input type="email" name="" id="" placeholder="Email" class="text-white bg-black" required />
-							<input type="text" name="" id="" placeholder="Phone Number" class="text-white bg-black" required />
-							<input type="text" name="" id="" placeholder="Message" class="text-white bg-black h-32" required />
+							<div class="flex flex-row gap-2 w-full">
+								<input type="email" name="" id="" placeholder="Email" class="text-white bg-black w-full" required />
+								<input type="text" name="" id="" placeholder="Phone Number" class="text-white bg-black w-full" required />
+							</div>
+							<input
+								type="textarea"
+								name=""
+								id=""
+								placeholder="Message"
+								class="text-white bg-black h-32 rounded-none border-[1px] border-gray-500 px-3"
+								required
+							/>
 							<input
 								type="submit"
 								value="Submit"
-								class="flex flex-row text-sm h-fit w-full py-2 px-6 bg-red-600 items-center hover:cursor-pointer hover:bg-red-700 transition ease-in-out duration-150"
+								class="flex flex-row text-sm h-fit w-full py-2 px-6 bg-red-600 items-center hover:cursor-pointer hover:bg-red-700 transition ease-in-out duration-150 placeholder:text-center"
 							/>
 						</form>
-						<div class="h-full w-2 bg-white/75"></div>
 						<div class="w-fit">
 							<p class="text-white/75 text-sm text-justify w-fit">
 								For inquiries, collaborations, and more, contact us at:
@@ -425,7 +451,7 @@
 		</main>
 		<footer class="bg-black text-gray-400 py-10 px-12">
 			<div class="justify-center">
-				<div class="flex flex-col md:flex-row justify-between items-center">
+				<div class="flex lg:flex-col md:flex-row justify-between items-center">
 					<!-- Logo and Slogan -->
 					<div class="flex flex-col gap-2">
 						<a id="logo" href="#" class="flex flex-row items-center gap-4 mix-blend-difference">
